@@ -42,3 +42,15 @@ docker compose version
 ```
 sudo usermod -aG docker $USER
 ```
+
+
+# Si hay problemas con el volumen:
+### Fix the permissions on the host directory:
+```
+sudo chown -R 1000:1000 /home/ubuntu/.n8n
+```
+### If the directory doesn't exist, create it first:
+```
+mkdir -p /home/ubuntu/.n8n
+sudo chown -R 1000:1000 /home/ubuntu/.n8n
+```
